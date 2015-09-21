@@ -5,14 +5,14 @@
 #   none
 #
 # Commands:
-#   sad panda, angry panda, frustated panda, happy panda, hungry panda, kungfu panda - hubot will reply with an image that captures that emotion.
+#   sad panda, angry panda, frustrated panda, happy panda, surprised panda, hungry panda, kungfu panda - hubot will reply with an image that captures that emotion.
 #   
 # Author:
 #   missu 
 
 module.exports = (robot) ->
   robot.hear /(.*) panda/i, (msg) ->
-    pandaType = msg.match[1]
+    pandaType = msg.match[1].toLowerCase()
     angry = [
         'http://fc08.deviantart.net/fs70/f/2010/010/6/1/CROSS_ID_Panda_Version_by_xxcrossmaniac.jpg'
         'http://www.electricdialogue.com/2012dev/wp-content/uploads/2012/04/angry-panda.png'
